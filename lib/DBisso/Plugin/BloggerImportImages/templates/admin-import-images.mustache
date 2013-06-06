@@ -1,0 +1,23 @@
+<div class="wrap">
+	<h2>{{page_title}}</h2>
+
+	<p>Note: the plugin will only import 5 images at a time for performance reasons so posts with many images will have to be imported multiple time</p>
+
+	<form method="POST" action="{{{action}}}">
+
+	{{#posts}}
+	<h3><a href="{{permalink}}">{{title}}</a></h3>
+
+	{{%IMPLICIT-ITERATOR iterator=image}}
+	{{#images}}
+	<ul>
+		<li>
+			{{image}}
+		</li>
+	</ul>
+	{{/images}}
+		<button name="blogger_import_image[import]" value="{{post_id}}" class="button">Import</button>
+	{{/posts}}
+		<hidden name="blogger_import_image[nonce]" value="{{nonce}}" />
+	</form>
+</div>

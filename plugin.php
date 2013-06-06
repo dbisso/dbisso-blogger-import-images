@@ -1,11 +1,10 @@
 <?php
 /*
-Plugin Name: WP Skeleton Plugin
-Plugin URI: [uri]
-Description: [desc]
+Plugin Name: Blogger Import Images
+Description: Searches for images in post content imported from blogger
 Version: 0.1
 Author: Dan Bissonnet
-Author URI: http://[url]
+Author URI: http://danisadesigner.com
 */
 
 /**
@@ -29,7 +28,6 @@ Author URI: http://[url]
  * GNU General Public License for more details.
  * **********************************************************************
  */
-
 $loader = include_once __DIR__ . '/vendor/autoload.php';
 $loader->add( 'DBisso', __DIR__ . '/lib' );
 
@@ -37,10 +35,10 @@ $loader->add( 'DBisso', __DIR__ . '/lib' );
  * Bootstrap or die
  */
 try {
-	if ( class_exists( 'Bisso_Hooker' ) ) {
-		DBisso\Plugin\SkeletonPlugin\Plugin::bootstrap( new \Bisso_Hooker );
+	if ( class_exists( '\DBisso\Util\Hooker' ) ) {
+		DBisso\Plugin\BloggerImportImages\Plugin::bootstrap( new DBisso\Util\Hooker );
 	} else {
-		throw new \Exception( 'Class Bisso_Hooker not found. Check that the plugin is installed.', 1 );
+		throw new \Exception( 'Class DBisso\Util\Hooker not found. Check that the plugin is installed.', 1 );
 	}
 } catch ( \Exception $e ) {
 	wp_die( $e->getMessage(), $title = 'Theme Exception' );

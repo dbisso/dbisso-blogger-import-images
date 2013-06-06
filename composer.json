@@ -9,6 +9,6 @@
         }
     ],
     "require": {
-
+        "phly/mustache": "*"
     }
 }

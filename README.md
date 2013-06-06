@@ -1,3 +1,4 @@
-## WP Skeleton Plugin
+## Blogger Import Images
 
-This is just a bit of boilerplate to speed up WordPress plugin development. Clone and fork at will.
+A simple-ish plugin that searches for images in post content that are hoste on blogger.com. When it finds them it will sideload the images into the appropriate post and replaces the link with the new image from the media library
+
