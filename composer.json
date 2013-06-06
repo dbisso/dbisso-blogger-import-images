@@ -1,0 +1,14 @@
+{
+    "name": "dbisso/dbisso-wp-plugin",
+    "description": "A Skeleton WordPress Plugin",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Dan Bissonnet",
+            "email": "dan@danisadesigner.com"
+        }
+    ],
+    "require": {
+
+    }
+}
